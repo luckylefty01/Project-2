@@ -1,9 +1,7 @@
-//==Dependencies
-
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-//==Schema
+//Schema
 
 const comicsSchema = Schema ({
   name: {type: String, required: True },
@@ -13,7 +11,7 @@ const comicsSchema = Schema ({
   qty: { type: Number, min: 0}
 })
 
-//==Export
+//Export
 
 const Comics = mongoose.model('Comics',
 comicsSchema)
