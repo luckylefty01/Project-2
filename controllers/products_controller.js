@@ -8,7 +8,7 @@ const products = express.Router()
 //index
 products.get('/',(req, res) => {
   Comics.find({}, (err, foundComics) => {
-    res.render('comics/index.ejs', {
+    res.render('products/index.ejs', {
       comics: foundComics
     })
   })
@@ -16,13 +16,13 @@ products.get('/',(req, res) => {
 
 //new
 products.get('/new', (req, res) => {
-  res.render('comics/new.ejs')
+  res.render('products/new.ejs')
 })
 
 //show
 products.get('/:id', (req, res) => {
   Comics.findById(req.params.id, (err, foundComic) => {
-    res.render('comics/show.ejs', {
+    res.render('products/show.ejs', {
       comic: foundComic
     })
   })
@@ -31,7 +31,7 @@ products.get('/:id', (req, res) => {
 //edit
 products.get('/:id/edit', (req, res) => {
   Comics.findById(req.params.id, (err, foundComic) => {
-    res.render('comics/edit.ejs',{
+    res.render('products/edit.ejs',{
       comic: foundComic
     })
   })
@@ -40,7 +40,7 @@ products.get('/:id/edit', (req, res) => {
 // create
 products.post('/', (req, res) => {
   Comics.create(req.body, (err, createdComic) => {
-    res.redirect(`/comics`)
+    res.redirect(`/products`)
   })
 })
 
@@ -49,7 +49,7 @@ products.put('/:id', (req, res) => {
   Comics.findByIdAndUpdate(
     req.params.id,
     req.body, {new: true}, (err, updatedComic) => {
-      res.redirect(`/comics/${req.params.id}`)
+      res.redirect(`/products/${req.params.id}`)
     }
   )
 })
@@ -61,7 +61,7 @@ products.put('/:id/buy', (req, res) => {
     { $inc: { qty: -1 } },
     { new: true },
     (err, updatedProduct) => {
-      res.redirect(`/comics/${req.params.id}`)
+      res.redirect(`/products/${req.params.id}`)
     }
   )
 })
@@ -69,8 +69,8 @@ products.put('/:id/buy', (req, res) => {
 // delete
 products.delete('/;id', (req, res) => {
   Comics.findByIdAndRemove(req.params.id, (err, deletedComic) => {
-    res.redirect('/comics')
+    res.redirect('/products')
   })
-}
+})
 
 module.exports = products
