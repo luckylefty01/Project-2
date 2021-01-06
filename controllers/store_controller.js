@@ -66,7 +66,7 @@ store.put('/:id/buy', (req, res) => {
 })
 
 // delete
-store.delete('/;id', (req, res) => {
+store.delete('/:id', (req, res) => {
   Comics.findByIdAndRemove(req.params.id, (err, deletedComic) => {
     res.redirect('/store')
   })

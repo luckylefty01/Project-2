@@ -9,7 +9,9 @@
       <h1 id="store"><a href="/store">Comic-Con Collectibles!</a></h1>
       <a href="/store/new" class="new-link">New Mystery Box</a>
     </nav>
-    <form class="edit" action="/products" method="POST">
+    <div class="container">
+      <h2>Create Your Mystery Box</h2>
+        <form class="edit" action="/store" method="POST">
             <label for="name">Name: </label>
             <input type="text" name="name" value="" required id="name">
             <label for="img">Image: </label>
@@ -21,6 +23,7 @@
             <label for="qty">Quantity: </label>
             <input type="number" name="qty"  pattern="[0-9]*" min="0" value="0" id="qty"><br>
             <input type="submit" name="submit" value="submit" class="edit-button">
-          </form>
+        </form>
+  </div>
   </body>
 </html>

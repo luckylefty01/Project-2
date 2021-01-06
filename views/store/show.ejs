@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <nav>
+      <h1 id="store"><a href="/store">Comic-Con Collectibles!</a></h1>
+    </nav>
+      <div class="container">
+        <h3><%= comic.name %></h3>
+        <p><%=comic.description %></p>
+        <% if(comic.qty <= 0) { %>
+          <h4>OUT OF STOCK</h4>
+            <% } else { %>
+          <h5><%= comic.qty %> remaining</h5>
+            <form action="/store/<%=comic.id%>/buy?_method=put" method="POST">
+            <button type="submit">BUY</button>
+            </form>
+            <% } %>
+            <h4>Price: $<%= comic.price %></h4>
+    </div>
+    <div class="show-btns">
+      <a href="/store/<%=comic.id%>/edit"><button type="button"        name="button" class="edit-button">EDIT</button></a>
+        <form action="/store/<%=comic.id%>?_method=DELETE" method="post">
+          <button type="submit" class="delete-button">DELETE</button>
+        </form>
+
+    </div>
+  </body>
+</html>
