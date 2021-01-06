@@ -8,18 +8,18 @@ sessions.get('/new', (req, res) => {
 })
 
 sessions.post('/', (req, res) => {
-  User.findOne({username: req.body.username}, (err, foundUser) => {
-    if (err) {
+  User.findOne({username: req.body.username},(err,foundUser) => {
+    if(err) {
       console.log(err);
-      res.send('The Database had an issue')
-    } else if (!foundUser){
-      res.send('<a href="/">User Does Not Exist</a>')
+      res.send('something is wrong with the db')
+    } else if (!foundUser) {
+        res.send('<a href="/">No User Found! Please create an account </a>')
     } else {
-      if(bcrypt.compareSync(req.body.password, foundUser.password)){
+      if(bcrypt.compareSync(req.body.password, foundUser.password)) {
         req.session.currentUser = foundUser
         res.redirect('/')
       } else {
-        res.send('<a href= "/"> Incorrect Password </a>')
+        res.send('<a href="/">Incorrect Password </a>')
       }
     }
   })
@@ -27,7 +27,7 @@ sessions.post('/', (req, res) => {
 
 sessions.delete('/', (req, res) => {
   req.session.destroy(() => {
-    res.redirect('/')
+    res.redirect('/store')
   })
 })
 
