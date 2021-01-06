@@ -4,7 +4,6 @@ const Comics = require('../models/comics')
 const store = express.Router()
 
 //====Routes====
-
 //index
 store.get('/',(req, res) => {
   Comics.find({}, (err, foundComics) => {

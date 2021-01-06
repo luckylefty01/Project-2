@@ -46,8 +46,8 @@ const sessionsController = require('./controllers/sessions_controller.js')
 app.use('/sessions', sessionsController)
 
 // seed
-app.get('/config/seed', (req, res) => {
-    Comics.create(storeSeed, (err, createdProducts) => {
+app.get('/seed', (req, res) => {
+    Comics.create(storeSeed, (err, createdStore) => {
         console.log(createdStore,'\n\n✅ storeController created!')
         res.redirect('/store')
     })
