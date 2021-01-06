@@ -7,7 +7,7 @@ module.exports = [
     qty: 50,
   },
   {
-    name: 'Clan of theh Golden Dragon Gomez',
+    name: 'Clan of the Golden Dragon Gomez',
     description: 'Somewhere in a mystical land ruled by feudal law, Shinobi tribes clash over territory and honor. When the ‘Clan of The Golden Dragons’ are attacked and slaughtered by the nefarious ‘House of The Golden Skulls’, all are left for dead. One warrior, his faithful Boom Box, and a baby, survive to avenge his fallen brothers. Gomez rises with a sole purpose – revenge.The highflying warrior wears a shinobi shozoku with forearm guards, a waist belt, shin guards, and tabi boots. The Golden Dragon’s greatest champion is equipped with a ninja-smoke plume FX that masks his next move, making Gomez the master of stealth. As always, Gomez is well-equipped to take on whatever may come his way. He comes complete with a kusarigama connected with a real metal chain, multiple shuriken, a katana with sheath, a grappling hook, two tanto swords, and much more.',
     // img:,
     price: 150,

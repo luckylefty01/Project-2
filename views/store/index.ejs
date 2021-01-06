@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NYCC Outlet</title>
+  </head>
+  <body
+    <nav>
+      <h1 id="store"><a href="/store">Comic-Con Collectibles!</a></h1>
+      <a href="/store/new" class="new-link">New Mystery Box</a>
+    </nav>
+      <div class="container">
+          <ul>
+            <% for(let comic of comics) { %>
+              <li>
+                <a href="/store/<%=comic._id%>">
+                  <%=comic.name %>
+              </li>
+            <%}%>
+          </ul>
+
+      </div>
+  </body>
+</html>

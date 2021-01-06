@@ -7,7 +7,7 @@ require('dotenv').config()
 const PORT = process.env.PORT || 3003
 // models
 const Comics = require('./models/comics')
-const productsSeed = require('./models/seed')
+const storeSeed = require('./models/seed')
 
 // database
 const MONGODB_URI = process.env.MONGODB_URI
@@ -32,22 +32,28 @@ app.use(methodOverride('_method'))
 // })
 
 // controller
-const productsController = require('./controllers/products_controller')
-app.use('/products', productsController)
+const storeController = require('./controllers/store_controller')
+app.use('/store', storeController)
 
 app.get('/',(req, res) => {
-  res.redirect('/products')
+  res.redirect('/store')
 })
+
+// auth controller
+const userController = require('./controllers/users_controller.js')
+app.use('/users', userController)
+const sessionsController = require('./controllers/sessions_controller.js')
+app.use('/sessions', sessionsController)
 
 // seed
 app.get('/config/seed', (req, res) => {
-    Comics.create(productsSeed, (err, createdProducts) => {
-        console.log(createdProducts,'\n\n✅ Products created!')
-        res.redirect('/products')
+    Comics.create(storeSeed, (err, createdProducts) => {
+        console.log(createdStore,'\n\n✅ storeController created!')
+        res.redirect('/store')
     })
 })
 
-
+// listener
 app.listen(PORT, () => {
   console.log('Listening on port: ', PORT)
 })
