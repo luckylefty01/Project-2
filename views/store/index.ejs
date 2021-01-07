@@ -2,6 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <title>Comic Con Collectibles</title>
   </head>
   <body
@@ -11,15 +14,16 @@
       <a href="/seed">Seed</a>
     </nav>
       <div class="container">
-          <ul>
-            <% for(let comic of comics) { %>
-              <li>
-                <a href="/store/<%=comic._id%>">
-                  <%=comic.name %>
-              </li>
-            <%}%>
-          </ul>
-
+        <div class="comics">
+          <% comics.forEach( comic => { %>
+            <div class="card">
+              <h4><%= comic.name %></h4>
+              <a href="/store/<%=comic._id%>">
+                <img src="<%= comic.img %>" alt=""></a>
+                <h5>Price: $<%=comic.price %></h5>
+            </div>
+          <% }) %>
+        </div>
       </div>
   </body>
 </html>

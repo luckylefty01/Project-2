@@ -22,7 +22,7 @@ module.exports = [
   },
   {
     name: 'Mezco Toyz Stealth Ops Gomez',
-    decription: 'An incoming transmission from The Void instructs Gomez to go unseen, unheard, and unknown. Receiving instructions via a combination of subliminal broadcasts and interfacing with his trusty boom box sidekick, Boom Boom, Gomez is ready for any inter-dimensional mission. What adventures lie ahead? You decide.',
+    description: 'An incoming transmission from The Void instructs Gomez to go unseen, unheard, and unknown. Receiving instructions via a combination of subliminal broadcasts and interfacing with his trusty boom box sidekick, Boom Boom, Gomez is ready for any inter-dimensional mission. What adventures lie ahead? You decide...',
     img: 'https://i.imgur.com/jC63RyB.jpg',
     price: 105,
     qty: 50,

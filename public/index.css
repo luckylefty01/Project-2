@@ -1,0 +1,17 @@
+body {
+  background: steelblue;
+  font-family: 'Bangers', cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: white;
+}
+
+.card img {
+  width: 285px;
+  height: 300px;
+}

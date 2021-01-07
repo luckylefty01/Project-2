@@ -10,6 +10,7 @@
     </nav>
       <div class="container">
         <h3><%= comic.name %></h3>
+        <img src="<%=comic.img%>" alt="">
         <p><%=comic.description %></p>
         <% if(comic.qty <= 0) { %>
           <h4>OUT OF STOCK</h4>

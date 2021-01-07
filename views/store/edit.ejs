@@ -13,18 +13,22 @@
       <form class="edit" action="/store/<%=comic.id%>?_method=PUT" method="POST">
           <label for="name">Name: </label>
           <input type="text" name="name" value="<%=comic.name%>" id="name">
+
           <label for="img">Image: </label>
           <input type="text" name="img" value="<%=comic.img%>" id="img">
+
           <label for="description">Description: </label>
           <textarea name="description" value="" id="description"><%=comic.description%></textarea>
+
           <label for="price">Price: </label>
           <input type="number" name="price" value="<%=comic.price || 0 %>" min="0" step=".01">
+
           <label for="qty">Quantity: </label>
           <input type="number" name="qty" value="<%=comic.qty || 0 %>" min="0" id="qty"> <br>
           <input type="submit" name="submit" value="submit" class="edit-button">
         </form>
           <h5>Current image:</h5>
-          <img src="<%= comic.img %>" alt="An image of <%= comic.name %>" />
+          <img src="<%= comic.img %>" alt="" />
     </div>
   </body>
 </html>
