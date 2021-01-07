@@ -2,27 +2,32 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="../new.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <title>Comic Con Collectibles</title>
   </head>
   <body>
     <nav>
       <h1 id="store"><a href="/store">Comic-Con Collectibles!</a></h1>
-      <a href="/store/new" class="new-link">New Mystery Box</a>
     </nav>
     <div class="container">
       <h2>Create Your Mystery Box</h2>
+
+        <img class="mystery" src="https://i.imgur.com/p8eyuve.jpg" alt="">
         <form class="edit" action="/store" method="POST">
             <label for="name">Name: </label>
-            <input type="text" name="name" value="" required id="name">
-            <label for="img">Image: </label>
-            <input type="text" name="img" value="" id="img">
+            <input type="text" name="name" value="" required id="name"><br/>
+
             <label for="description">Description: </label>
-            <textarea name="description" value="" id="description"></textarea>
+            <textarea name="description" value="" id="description"></textarea><br/>
+
             <label for="price">Price: </label>
-            <input type="number" name="price" min="0" step=".01" value="0" id="price">
+            <input type="number" name="price" min="0" step=".01" value="0" id="price"><br/>
+
             <label for="qty">Quantity: </label>
-            <input type="number" name="qty"  pattern="[0-9]*" min="0" value="0" id="qty"><br>
-            <input type="submit" name="submit" value="submit" class="edit-button">
+            <input type="number" name="qty"  pattern="[0-9]*" min="0" value="0" id="qty"><br/>
+            <input type="submit" name="submit" value="Create Your Box" class="edit-button">
         </form>
   </div>
   </body>

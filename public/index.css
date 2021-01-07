@@ -5,13 +5,22 @@ body {
 
 a {
   text-decoration: none;
-}
-
-h1 {
   color: white;
 }
 
+.card {
+  width: 275px;
+  padding: 20px;
+  margin: 20px 0;
+  background: grey;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 2px 2px #eee
+}
+
 .card img {
-  width: 285px;
+  width: 265px;
   height: 300px;
 }
