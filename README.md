@@ -6,3 +6,5 @@ Here are some issues I ran into while building this project out:
 2. I did minimal CSS styling to my project. In the future I plan to add Bootstrap to assist with my page layouts.
 3. I had issues with setting up authorization so I scrapped it, the code is still in the server.js file. I also have the folders and files(sessions & users) in the views folder. I plan to add this functionality when I have time to in the future.
 4. I wanted a shopping cart feature and I found a video with how to do build it out, I just ran out of time to start developing it. This feature will be added with the authorization in the future. 
+
+Lastly I want to thank AJ, Banu, Evan, and Brandon for helping me with issues I ran into afterhours.  
